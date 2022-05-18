@@ -1,17 +1,25 @@
 using FishNet.Object;
 using System.Collections;
 using UnityEngine;
+using Cinemachine;
 
-public class CameraController : NetworkBehaviour
+public class CameraController : MonoBehaviour
 {
-    public override void OnStartClient()
+    private void Awake()
     {
-        base.OnStartClient();
+        FirstObjectNotifier.OnFirstObjectSpawned += OnFirstObjectSpawned;
+    }
 
-        if (!IsOwner)
-            return;
+    private void OnFirstObjectSpawned(Transform transform)
+    {
+        CinemachineVirtualCamera virtualCamera = GetComponent<CinemachineVirtualCamera>();
 
-        Camera cam = GetComponent<Camera>();
-        cam.enabled = true;
+        virtualCamera.Follow = transform;
+        virtualCamera.LookAt = transform;
+    }
+
+    private void OnDestroy()
+    {
+        FirstObjectNotifier.OnFirstObjectSpawned -= OnFirstObjectSpawned;
     }
 }

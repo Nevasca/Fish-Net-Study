@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2579781514381171510}
   - component: {fileID: 3177617211716186216}
   - component: {fileID: 8000677326485584658}
+  - component: {fileID: 4420937083425599016}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -103,9 +104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42557a88ab2c0ef4fb820c271483cbce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 2
-  _addedNetworkObject: {fileID: 2579781514381171510}
-  _networkObjectCache: {fileID: 2579781514381171510}
 --- !u!114 &2579781514381171510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,10 +125,10 @@ MonoBehaviour:
   _networkBehaviours:
   - {fileID: 1102900774509054315}
   - {fileID: 3177617211716186216}
-  - {fileID: 565893177449355941}
   - {fileID: 8000677326485584658}
+  - {fileID: 4420937083425599016}
   SceneTransformProperties:
-    Position: {x: -3.4229631, y: 0.0000009536743, z: -2.041315}
+    Position: {x: 0, y: 0, z: 0}
     Rotation: {x: 0, y: 0, z: 0, w: 1}
     LocalScale: {x: 1, y: 1, z: 1}
   _isNetworked: 1
@@ -188,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8cac635f24954048aad3a6ff9110beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 3
+  _componentIndexCache: 2
   _addedNetworkObject: {fileID: 2579781514381171510}
   _networkObjectCache: {fileID: 2579781514381171510}
   IgnoredParameters: []
@@ -197,6 +195,21 @@ MonoBehaviour:
   _synchronizeInterval: 0.1
   _clientAuthoritative: 1
   _sendToOwner: 0
+--- !u!114 &4420937083425599016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4767096775019695464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08764edb340e2e74bbd7b381081d9a77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 3
+  _addedNetworkObject: {fileID: 2579781514381171510}
+  _networkObjectCache: {fileID: 2579781514381171510}
 --- !u!1 &8588574889304338879
 GameObject:
   m_ObjectHideFlags: 0
